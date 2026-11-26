@@ -7,35 +7,42 @@
 <meta name="description" content="Ofertas do dia para gatos: ração, areia, petiscos e acessórios.">
 <link href="https://fonts.googleapis.com/css2?family=Macondo&family=Macondo+Swash+Caps&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
-  :root { --fundo1:#f7ecd6; --fundo2:#e9d6b2; --tinta:#3b2612; --verde:#1f5c2e; --vermelho:#962020; }
+  :root { --creme:#fff4e1; --ouro:#e9c37a; --ouro2:#c99a4b; --vidro:rgba(16,22,42,.58); --borda:rgba(233,195,122,.35); }
   * { box-sizing:border-box; }
-  body { margin:0; font-family:Nunito,system-ui,sans-serif; color:var(--tinta); min-height:100vh;
+  body { margin:0; font-family:Nunito,system-ui,sans-serif; color:var(--creme); min-height:100vh;
          background:#141a2e url(fundo.jpg) center/cover fixed; }
   #fundo { position:fixed; inset:0; width:100%; height:100%; object-fit:cover; z-index:-2; }
   body::before { content:""; position:fixed; inset:0; z-index:-1;
-                 background:linear-gradient(rgba(10,14,30,.35),rgba(10,14,30,.15) 40%,rgba(10,14,30,.45)); }
+                 background:linear-gradient(rgba(8,12,28,.55),rgba(8,12,28,.05) 35%,rgba(8,12,28,.05) 60%,rgba(8,12,28,.6)); }
   @media (prefers-reduced-motion: reduce) { #fundo { display:none; } }
-  main { max-width:560px; margin:0 auto; padding:28px 16px 40px; }
-  header { text-align:center; margin-bottom:22px; color:#fff4e1; text-shadow:0 2px 8px rgba(0,0,0,.6); }
-  header img { width:96px; height:96px; border-radius:50%; box-shadow:0 4px 16px rgba(0,0,0,.45); }
-  h1 { font-family:'Macondo Swash Caps',serif; font-weight:400; font-size:30px; margin:10px 0 4px; }
-  .sub { font-size:15px; opacity:.9; }
-  .faixa { display:inline-block; background:var(--vermelho); color:#fff4e1; font-family:'Macondo Swash Caps',serif;
-           font-size:20px; padding:6px 22px; border-radius:30px; margin:14px 0 4px; }
-  .card { display:flex; gap:14px; background:#fff; border-radius:18px; padding:12px; margin:12px 0;
-          text-decoration:none; color:inherit; box-shadow:0 4px 14px rgba(80,50,20,.15); }
-  .foto { flex:0 0 108px; height:108px; display:flex; align-items:center; justify-content:center; }
-  .foto img { max-width:108px; max-height:108px; object-fit:contain; }
+  main { max-width:520px; margin:0 auto; padding:22px 16px 40px; }
+  header { text-align:center; margin-bottom:18px; text-shadow:0 2px 10px rgba(0,0,0,.7); }
+  header img { width:78px; height:78px; border-radius:50%; border:2px solid var(--ouro);
+               box-shadow:0 0 0 4px rgba(233,195,122,.15),0 6px 18px rgba(0,0,0,.5); }
+  h1 { font-family:'Macondo Swash Caps',serif; font-weight:400; font-size:clamp(22px,6.4vw,30px);
+       margin:8px 0 2px; color:var(--ouro); letter-spacing:.3px; }
+  .sub { font-size:14px; opacity:.92; }
+  .card { display:flex; gap:14px; align-items:center; background:var(--vidro); border:1px solid var(--borda);
+          -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); border-radius:18px; padding:12px;
+          margin:12px 0; text-decoration:none; color:inherit; box-shadow:0 8px 24px rgba(0,0,0,.35); }
+  .card:active { transform:scale(.99); }
+  .foto { flex:0 0 96px; height:96px; background:#fff; border-radius:14px; display:flex;
+          align-items:center; justify-content:center; overflow:hidden; }
+  .foto img { max-width:88px; max-height:88px; object-fit:contain; }
   .info { flex:1; min-width:0; }
-  .nome { font-family:Macondo,serif; font-size:17px; line-height:1.2; max-height:3.6em; overflow:hidden; }
-  .preco { font-weight:800; font-size:24px; color:var(--verde); margin-top:4px; }
-  .kg { font-size:13px; opacity:.8; }
-  .loja { font-size:13px; margin-top:2px; }
-  .botao { display:inline-block; margin-top:8px; background:var(--tinta); color:#fff4e1; font-weight:800;
-           font-size:14px; padding:6px 16px; border-radius:20px; }
-  .vazio { text-align:center; margin:40px 0; color:#fff4e1; text-shadow:0 2px 6px rgba(0,0,0,.6); }
-  footer { text-align:center; font-size:12px; color:#fff4e1; opacity:.85; margin-top:24px; line-height:1.5;
-           text-shadow:0 1px 4px rgba(0,0,0,.7); }
+  .nome { font-weight:700; font-size:14px; line-height:1.3; max-height:3.9em; overflow:hidden;
+          text-transform:lowercase; }
+  .nome::first-letter { text-transform:uppercase; }
+  .linha { display:flex; align-items:baseline; gap:8px; flex-wrap:wrap; margin-top:4px; }
+  .preco { font-weight:800; font-size:22px; color:var(--ouro); }
+  .kg { font-size:12px; opacity:.8; }
+  .pe { display:flex; align-items:center; justify-content:space-between; margin-top:6px; }
+  .loja { font-size:12px; opacity:.8; }
+  .botao { background:linear-gradient(var(--ouro),var(--ouro2)); color:#2a1a08; font-weight:800;
+           font-size:13px; padding:6px 14px; border-radius:20px; }
+  .vazio { text-align:center; margin:40px 0; text-shadow:0 2px 6px rgba(0,0,0,.6); }
+  footer { text-align:center; font-size:11px; opacity:.85; margin-top:22px; line-height:1.5;
+           text-shadow:0 1px 4px rgba(0,0,0,.8); }
 </style>
 </head>
 <body>
@@ -46,31 +53,28 @@
   <header>
     <img src="logo.png" alt="Achadinhos das Gatas de Botas">
     <h1>Achadinhos das Gatas de Botas</h1>
-    <div class="sub">Ofertas do dia para o seu gato</div>
-    <div class="faixa">Ofertas dos vídeos e stories</div>
+    <div class="sub">As ofertas dos vídeos e stories, num só lugar</div>
   </header>
 
     <a class="card" href="https://s.shopee.com.br/60TSSg28Rx" target="_blank" rel="nofollow sponsored noopener">
       <div class="foto"><img src="https://cf.shopee.com.br/file/br-11134207-81z1k-mg2oaouznksnde" alt="" loading="lazy"></div>
       <div class="info">
         <div class="nome">RAÇÃO QUATREE GOURMET GATO ADULTO PEIXE 20KG</div>
-        <div class="preco">R$ 202,00</div><div class="kg">R$ 10,10/kg</div>
-        <div class="loja">na Shopee</div>
-        <div class="botao">Ver oferta</div>
+        <div class="linha"><span class="preco">R$ 202,00</span><span class="kg">R$ 10,10/kg</span></div>
+        <div class="pe"><span class="loja">na Shopee</span><span class="botao">Ver oferta</span></div>
       </div>
     </a>
     <a class="card" href="https://s.shopee.com.br/5fqbrUwtqu" target="_blank" rel="nofollow sponsored noopener">
       <div class="foto"><img src="https://cf.shopee.com.br/file/sg-11134201-8227a-mhhpbemvgjy92c" alt="" loading="lazy"></div>
       <div class="info">
         <div class="nome">FORMULA NATURAL FRESH MEAT GATO SENIOR 7+ FRANGO 10,1KG</div>
-        <div class="preco">R$ 269,20</div><div class="kg">R$ 26,65/kg</div>
-        <div class="loja">na Shopee</div>
-        <div class="botao">Ver oferta</div>
+        <div class="linha"><span class="preco">R$ 269,20</span><span class="kg">R$ 26,65/kg</span></div>
+        <div class="pe"><span class="loja">na Shopee</span><span class="botao">Ver oferta</span></div>
       </div>
     </a>
   <footer>
     Publi: links de afiliado. Preços e estoque podem mudar a qualquer momento.<br>
-    Atualizado em 26/11/2026 às 05:17.
+    Atualizado em 26/11/2026 às 05:26.
   </footer>
 </main>
 </body>
