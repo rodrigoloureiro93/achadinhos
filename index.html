@@ -9,12 +9,23 @@
 <style>
   :root { --creme:#fff4e1; --ouro:#e9c37a; --ouro2:#c99a4b; --vidro:rgba(16,22,42,.58); --borda:rgba(233,195,122,.35); }
   * { box-sizing:border-box; }
-  body { margin:0; font-family:Nunito,system-ui,sans-serif; color:var(--creme); min-height:100vh;
-         background:#141a2e url(fundo.jpg) center/cover fixed; }
-  #fundo { position:fixed; inset:0; width:100%; height:100%; object-fit:cover; z-index:-2; }
-  body::before { content:""; position:fixed; inset:0; z-index:-1;
-                 background:linear-gradient(rgba(8,12,28,.55),rgba(8,12,28,.05) 35%,rgba(8,12,28,.05) 60%,rgba(8,12,28,.6)); }
-  @media (prefers-reduced-motion: reduce) { #fundo { display:none; } }
+  html { background:#182334 linear-gradient(#182334 0,#182334 55%,#181b1e 100%) fixed; }
+  body { margin:0; font-family:Nunito,system-ui,sans-serif; color:var(--creme); min-height:100vh; }
+  /* video inteiro (com as sacolas) na largura da tela, preso embaixo; o ceu de cima continua na cor do video */
+  #fundo { position:fixed; left:0; bottom:0; width:100%; height:auto; z-index:-2;
+           -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 22%);
+           mask-image:linear-gradient(to bottom,transparent 0,#000 22%); }
+  @media (min-aspect-ratio: 16/9) { #fundo { height:100%; object-fit:cover; -webkit-mask-image:none; mask-image:none; } }
+  .ceu { position:fixed; inset:0; z-index:-3; pointer-events:none; opacity:.75;
+         background-image:
+           radial-gradient(1.4px 1.4px at 12% 8%,#fff,transparent 60%), radial-gradient(1px 1px at 33% 21%,#fff,transparent 60%),
+           radial-gradient(1.8px 1.8px at 58% 6%,#ffeccc,transparent 60%), radial-gradient(1px 1px at 81% 15%,#fff,transparent 60%),
+           radial-gradient(1.2px 1.2px at 91% 33%,#fff,transparent 60%), radial-gradient(1px 1px at 7% 41%,#fff,transparent 60%),
+           radial-gradient(1.6px 1.6px at 47% 37%,#ffeccc,transparent 60%), radial-gradient(1px 1px at 70% 48%,#fff,transparent 60%),
+           radial-gradient(1.2px 1.2px at 24% 56%,#fff,transparent 60%), radial-gradient(1px 1px at 63% 27%,#fff,transparent 60%);
+         animation:brilho 3.5s ease-in-out infinite alternate; }
+  .ceu.b { background-position:37px 61px; animation-delay:-1.7s; opacity:.55; }
+  @keyframes brilho { from { opacity:.25; } to { opacity:.85; } }
   main { max-width:520px; margin:0 auto; padding:22px 16px 40px; }
   header { text-align:center; margin-bottom:18px; text-shadow:0 2px 10px rgba(0,0,0,.7); }
   header img { width:78px; height:78px; border-radius:50%; border:2px solid var(--ouro);
@@ -46,6 +57,7 @@
 </style>
 </head>
 <body>
+<div class="ceu" aria-hidden="true"></div><div class="ceu b" aria-hidden="true"></div>
 <video id="fundo" autoplay muted loop playsinline poster="fundo.jpg" aria-hidden="true">
   <source src="fundo.mp4" type="video/mp4">
 </video>
@@ -74,7 +86,7 @@
     </a>
   <footer>
     Publi: links de afiliado. Preços e estoque podem mudar a qualquer momento.<br>
-    Atualizado em 26/11/2026 às 05:26.
+    Atualizado em 26/11/2026 às 05:32.
   </footer>
 </main>
 </body>
