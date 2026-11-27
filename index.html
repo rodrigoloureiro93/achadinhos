@@ -33,6 +33,13 @@
   h1 { font-family:'Macondo Swash Caps',serif; font-weight:400; font-size:clamp(22px,6.4vw,30px);
        margin:8px 0 2px; color:var(--ouro); letter-spacing:.3px; }
   .sub { font-size:14px; opacity:.92; }
+  .grupos { display:flex; justify-content:center; gap:34px; margin-top:14px; }
+  .grupo { display:flex; flex-direction:column; align-items:center; gap:5px; color:inherit;
+           text-decoration:none; font-size:12px; font-weight:700; }
+  .circulo { width:54px; height:54px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+             border:2px solid var(--ouro); box-shadow:0 0 0 4px rgba(233,195,122,.15),0 6px 18px rgba(0,0,0,.5); }
+  .circulo svg { width:29px; height:29px; fill:#fff; }
+  .grupo:active { transform:scale(.96); }
   .card { display:flex; gap:14px; align-items:center; background:var(--vidro); border:1px solid var(--borda);
           -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px); border-radius:18px; padding:12px;
           margin:12px 0; text-decoration:none; color:inherit; box-shadow:0 8px 24px rgba(0,0,0,.35); }
@@ -66,8 +73,26 @@
     <img src="logo.png?v=8d5fb2e3ff" alt="Achadinhos das Gatas de Botas">
     <h1>Achadinhos das Gatas de Botas</h1>
     <div class="sub">As ofertas dos vídeos e stories, num só lugar</div>
+    <nav class="grupos">
+      <a class="grupo" href="https://chat.whatsapp.com/LpPgmRM0KQeKSjjvVRKzpD" target="_blank" rel="noopener" aria-label="Entrar no grupo do WhatsApp">
+        <span class="circulo" style="background:#25d366"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></span>
+        <span class="rotulo">WhatsApp</span>
+      </a>
+      <a class="grupo" href="https://t.me/promocoesgatos" target="_blank" rel="noopener" aria-label="Entrar no grupo do Telegram">
+        <span class="circulo" style="background:#229ed9"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.6 19.9c-.25 1.1-.9 1.37-1.83.85l-5.050-3.72-2.44 2.35c-.27.27-.5.5-1.02.5l.36-5.14 9.36-8.46c.41-.36-.09-.56-.63-.2L5.78 13.36.8 11.8c-1.08-.34-1.1-1.08.23-1.6L20.5 2.7c.9-.33 1.69.2 1.4 1.6z"/></svg></span>
+        <span class="rotulo">Telegram</span>
+      </a>
+    </nav>
   </header>
 
+    <a class="card" href="https://s.shopee.com.br/3g5ZXLeIW0" target="_blank" rel="nofollow sponsored noopener">
+      <div class="foto"><img src="https://cf.shopee.com.br/file/br-11134207-81z1k-mh2bumicjr4590" alt="" loading="lazy"></div>
+      <div class="info">
+        <div class="nome">Ração Biofresh Gatos Sênior Peixe Branco - 7,5kg</div>
+        <div class="linha"><span class="preco">R$ 299,90</span><span class="kg">R$ 39,99/kg</span></div>
+        <div class="pe"><span class="loja">na Shopee</span><span class="botao">Ver oferta</span></div>
+      </div>
+    </a>
     <a class="card" href="https://s.shopee.com.br/5VXCvAT3YH" target="_blank" rel="nofollow sponsored noopener">
       <div class="foto"><img src="https://cf.shopee.com.br/file/sg-11134201-824h9-me67aqw01xja18" alt="" loading="lazy"></div>
       <div class="info">
@@ -100,7 +125,7 @@
         <div class="pe"><span class="loja">na Shopee</span><span class="botao">Ver oferta</span></div>
       </div>
     </a>
-    <a class="card" href="https://s.shopee.com.br/AKcSGrhKUv" target="_blank" rel="nofollow sponsored noopener">
+    <a class="card" href="https://s.shopee.com.br/5LDnWPcHfo" target="_blank" rel="nofollow sponsored noopener">
       <div class="foto"><img src="https://cf.shopee.com.br/file/br-11134207-820lm-mu0lbn10zdoj05" alt="" loading="lazy"></div>
       <div class="info">
         <div class="nome">RAÇÃO GUABI NATURAL GATO CASTRADO SENIOR 7,5KG</div>
@@ -108,7 +133,7 @@
         <div class="pe"><span class="loja">na Shopee</span><span class="botao">Ver oferta</span></div>
       </div>
     </a>
-    <a class="card" href="https://s.shopee.com.br/7VIGM2c4B5" target="_blank" rel="nofollow sponsored noopener">
+    <a class="card" href="https://s.shopee.com.br/50ax7ni5dt" target="_blank" rel="nofollow sponsored noopener">
       <div class="foto"><img src="https://cf.shopee.com.br/file/sg-11134201-81zvk-mn4u5f7m94as0e" alt="" loading="lazy"></div>
       <div class="info">
         <div class="nome">Ração Life Gatos Castrados Salmão e Arroz Quatree 10.1kg</div>
@@ -116,7 +141,7 @@
         <div class="pe"><span class="loja">na Shopee</span><span class="botao">Ver oferta</span></div>
       </div>
     </a>
-    <a class="card" href="https://s.shopee.com.br/2gD0UyZBlY" target="_blank" rel="nofollow sponsored noopener">
+    <a class="card" href="https://s.shopee.com.br/30psk7yMim" target="_blank" rel="nofollow sponsored noopener">
       <div class="foto"><img src="https://cf.shopee.com.br/file/sg-11134201-23010-nkn37n94mjmvce" alt="" loading="lazy"></div>
       <div class="info">
         <div class="nome">Ração Guabi Natural Gatos Grain Free Castrados Salmão e Lentilha - 7,5Kg</div>
@@ -132,7 +157,7 @@
         <div class="pe"><span class="loja">na Shopee</span><span class="botao">Ver oferta</span></div>
       </div>
     </a>
-    <a class="card" href="https://s.shopee.com.br/40iOiK5eKn" target="_blank" rel="nofollow sponsored noopener">
+    <a class="card" href="https://s.shopee.com.br/50ax7nvHyC" target="_blank" rel="nofollow sponsored noopener">
       <div class="foto"><img src="https://cf.shopee.com.br/file/br-11134207-81z1k-mgmkismhqnt0ec" alt="" loading="lazy"></div>
       <div class="info">
         <div class="nome">RAÇÃO PREMIER NATTU GATO CASTRADO ABOBORA 7,5KG</div>
@@ -140,7 +165,7 @@
         <div class="pe"><span class="loja">na Shopee</span><span class="botao">Ver oferta</span></div>
       </div>
     </a>
-    <a class="card" href="https://s.shopee.com.br/60TSSg28Rx" target="_blank" rel="nofollow sponsored noopener">
+    <a class="card" href="https://s.shopee.com.br/6q2bJAsECd" target="_blank" rel="nofollow sponsored noopener">
       <div class="foto"><img src="https://cf.shopee.com.br/file/br-11134207-81z1k-mg2oaouznksnde" alt="" loading="lazy"></div>
       <div class="info">
         <div class="nome">RAÇÃO QUATREE GOURMET GATO ADULTO PEIXE 20KG</div>
@@ -148,7 +173,7 @@
         <div class="pe"><span class="loja">na Shopee</span><span class="botao">Ver oferta</span></div>
       </div>
     </a>
-    <a class="card" href="https://s.shopee.com.br/5fqbrUwtqu" target="_blank" rel="nofollow sponsored noopener">
+    <a class="card" href="https://s.shopee.com.br/9fMmgNmBYS" target="_blank" rel="nofollow sponsored noopener">
       <div class="foto"><img src="https://cf.shopee.com.br/file/sg-11134201-8227a-mhhpbemvgjy92c" alt="" loading="lazy"></div>
       <div class="info">
         <div class="nome">FORMULA NATURAL FRESH MEAT GATO SENIOR 7+ FRANGO 10,1KG</div>
@@ -158,7 +183,7 @@
     </a>
   <footer>
     Publi: links de afiliado. Preços e estoque podem mudar a qualquer momento.<br>
-    Atualizado em 26/11/2026 às 21:55.
+    Atualizado em 27/11/2026 às 02:53.
   </footer>
 </main>
 </body>
